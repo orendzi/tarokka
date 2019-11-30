@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Тарокка</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="jquery-3.4.1.min.js"></script>
+  <!-- <script src="http://code.jquery.com/jquery-3.4.1.js"></script> -->
+  <script src="tarokka.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Гадание на тарокка</h1>
+  </header>
+  <section>
+    <!-- <h3>Инструкции</h3>
+    <ol>
+      <li>Выберите из старшей колоды 14 карт и перетасуйте их.</li>
+      <li>После этого перетасуйте оставшуюся часть колоды.</li>
+      <li>Возьмите взакрытую 3 карты с верха младшей колоды и положите их последовательно треугольником.</li>
+      <li>После этого возьмите две карты с верха старшей колоды и положите их дополняя крест.</li>
+    </ol> -->
+
+    <article class="divination">
+      <button id="guess">Гадать</button>
+      <div class="alignment grid">
+        <div data-number="1" class="strahdtome"><img data-img="1" src="img/back.png" title="Эта карта говорит об истории. Знания древних помогут вам лучше понять своего врага."></img></div>
+        <div></div>
+        <div data-number="3" class="sunsword"><img data-img="3" src="img/back.png" title="Эта карта мощи и силы. Она говорит о орудии возмездия - мече из солнечного света."></img></div>
+        <div></div>
+        <div data-number="5" class="strahd"><img data-img="5" src="img/back.png" title="Ваш враг - существо тьмы, чьи силы находятся за гранью смертных. Эта карта приведет вас к нему."></img></div>
+        <div data-number="2" class="ravenkind"><img data-img="2" src="img/back.png" title="Эта карта говорит о могучей силе добра и защиты, святом символе доброй надежды."></img></div>
+        <div></div>
+        <div data-number="4" class="enemies"><img data-img="4" src="img/back.png" title="Эта карта проливает свет на тех, кто сильно поможет вам в битве с тьмой."></img></div>
+        <div></div>
+      </div>
+    </article>
+    <aside class="result-info">
+      <h4></h4>
+      <p></p>
+    </aside>
+  </section>
+</body>
+</html>

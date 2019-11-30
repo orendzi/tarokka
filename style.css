@@ -1,0 +1,91 @@
+/* @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css"); */
+
+html {
+  background: url('img/eva.jpg') top / cover fixed no-repeat;
+}
+
+html, body {
+  color: #fff;
+  font: 1rem 'Open Sans';
+  padding: 20px;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover, a:active {
+  color: red;
+}
+
+button {
+  background: #1b1a1e;
+  color: #fff;
+  padding: 30px;
+  border-radius: 3px;
+  border: 0;
+  font-size: 2rem;
+  width: 50%;
+  outline: 0;
+}
+
+button:hover {
+  background: #333;
+  cursor: pointer;
+}
+
+button:active {
+  color: orange;
+  cursor: pointer;
+}
+
+.divination {
+  margin-top: 40px;
+}
+
+.divination button {
+  margin: 0 0 20px 0;
+}
+
+/*Считать процент бы от размера экрана, чтобы помещались карточки все - сделать вообще адаптив*/
+.alignment {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.alignment, .grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+  width: 50%;
+}
+
+.alignment img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 13px;
+  border: 3px solid #1b1a1e;
+  background: #1b1a1e;
+  cursor: pointer;
+}
+
+.alignment img:hover {
+  border-color: orange;
+}
+
+.alignment a {
+  display: inline-block;
+}
+
+.alignment > div[data-number="1"] {
+  grid-area: 2 / 1 / auto / auto;
+}
+
+.result-info {
+  width: 50%;
+  margin: 20px 0 20px 0;
+}
