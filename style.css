@@ -1,14 +1,23 @@
 /* @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css"); */
 
-html {
-  background: url('img/eva.jpg') top / cover fixed no-repeat;
+.welcomescr {
+  background: url('img/eva.png') top / cover fixed no-repeat;
+  padding: 20px;
+  height: 100vh;
+}
+
+.response {
+  display: none;
+  padding: 20px;
+  background: #1a1a1a;
+  height: 100vh;
 }
 
 html, body {
   color: #fff;
-  font: 1rem 'Open Sans';
-  padding: 20px;
+  font: 1rem 'Hohenzollern';
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -20,14 +29,25 @@ a:hover, a:active {
   color: red;
 }
 
+h1 {
+  background: url('img/header.png') top / contain no-repeat;
+  height: 100px;
+  margin: 0 0 20px 28px;
+}
+
+.cta {
+  text-align: center;
+  position: relative;
+  top: 73%;
+}
+
 button {
-  background: #1b1a1e;
-  color: #fff;
-  padding: 30px;
+  background: #fff;
+  color: #A93226;
+  padding: 10px 30px;
   border-radius: 3px;
   border: 0;
   font-size: 2rem;
-  width: 50%;
   outline: 0;
 }
 
@@ -41,26 +61,29 @@ button:active {
   cursor: pointer;
 }
 
-.divination {
-  margin-top: 40px;
+@media (min-width: 320px) and (max-width: 480px) {
+  .welcomescr {
+    background-size: auto;
+  };
+  #guess {
+    position: absolute;
+    top: 70%;
+  };
 }
 
-.divination button {
-  margin: 0 0 20px 0;
+@media (min-width: 1281px) {
+  h1 {
+    height: 150px;
+  };
 }
 
-/*Считать процент бы от размера экрана, чтобы помещались карточки все - сделать вообще адаптив*/
 .alignment {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.alignment, .grid {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 20px;
   padding: 10px;
-  width: 50%;
+  width: calc(100vh / 1.8);
+  margin: 0 auto;
 }
 
 .alignment img {
@@ -77,15 +100,39 @@ button:active {
   border-color: orange;
 }
 
-.alignment a {
-  display: inline-block;
-}
-
 .alignment > div[data-number="1"] {
   grid-area: 2 / 1 / auto / auto;
 }
 
 .result-info {
-  width: 50%;
   margin: 20px 0 20px 0;
+  font-size: 1.5rem;
+  background: #1f1e1f;
+  padding: 10px;
+  letter-spacing: 3px;
+  display: inline-block;
+  min-width: 300px;
+}
+
+.result-info h4 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.result-info p {
+  margin: 0;
+}
+
+.forecaster {
+  height: 100px;
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+}
+
+@font-face {
+  font-family: "Hohenzollern";
+  src: url("hohenzollern.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }

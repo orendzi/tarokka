@@ -1,10 +1,6 @@
 $(document).ready(function() {
   $('#guess').click(function(){
-    // Переписать для большей рандомизаии
-    // function randomCards(arr, n) {
-    //   arr.sort(() => Math.random() - 0.5);
-    //   return arr.slice(0, n);
-    // };
+
     function randomCards(arr, n) {
       var i, j, temp;
       for (i=0; i<arr.length; i++) {
@@ -20,13 +16,9 @@ $(document).ready(function() {
     var junior_cards = randomCards(tarokka.juniordeck, 3);
 
     // показать расклад карт
-    $('.alignment').css({
-      'opacity': '1',
-      'visibility': 'visible',
-      'transition': 'visibility 0s linear 0ms, opacity 1200ms'
-    });
+    $('.response').fadeIn('600');
+    // TODO: скролл на скрин с картами
 
-    // console.log(senior_cards, junior_cards);
     $('.alignment img').click(function(event) {
       var item = $(event.target);
       var item_number = item.attr("data-img");
@@ -34,31 +26,37 @@ $(document).ready(function() {
 
       // Замена изображения по клику
       // Вывод описания карты
+      //FIX: медленно грузит картинки, надо подгружать втихаря
       switch(item_number){
         case 1:
           item.attr("src", junior_cards[0].image);
           $(".result-info h4").text(junior_cards[0].name);
           $(".result-info p").text(junior_cards[0].description);
+          $(".forecaster").css({'background': 'url("img/eva.png") 53% 28% / cover no-repeat', 'background-size': '500px'});
           break;
         case 2:
           item.attr("src", junior_cards[1].image);
           $(".result-info h4").text(junior_cards[1].name);
           $(".result-info p").text(junior_cards[1].description);
+          $(".forecaster").css({'background': 'url("img/eva.png") 53% 28% / cover no-repeat', 'background-size': '500px'});
           break;
         case 3:
           item.attr("src", junior_cards[2].image);
           $(".result-info h4").text(junior_cards[2].name);
           $(".result-info p").text(junior_cards[2].description);
+          $(".forecaster").css({'background': 'url("img/eva.png") 53% 28% / cover no-repeat', 'background-size': '500px'});
           break;
         case 4:
           item.attr("src", senior_cards[0].image);
           $(".result-info h4").text(senior_cards[0].name);
           $(".result-info p").text(senior_cards[0].ally);
+          $(".forecaster").css({'background': 'url("img/eva.png") 53% 28% / cover no-repeat', 'background-size': '500px'});
           break;
         case 5:
           item.attr("src", senior_cards[1].image);
           $(".result-info h4").text(senior_cards[1].name);
           $(".result-info p").text(senior_cards[1].location);
+          $(".forecaster").css({'background': 'url("img/eva.png") 53% 28% / cover no-repeat', 'background-size': '500px'});
           break;
         default:
           alert ('Ошибочка вышла =)');
